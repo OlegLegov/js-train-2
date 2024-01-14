@@ -5,6 +5,11 @@ function calculateExpression(expression) {
   //Преревіряємо чи аргумент є рядком
   //Якщо так повертаємо виконананий код
   // Якщо ні повертаємо текст "Argument is not a string"
+  if (typeof expression == "string") {
+    return eval(expression);
+  } else {
+    return "Argument is not a string";
+  }
 }
 
 console.log("Завдання 1 ====================================");
@@ -12,7 +17,7 @@ console.log(
   'calculateExpression("3 + 5 * 2")',
   calculateExpression("3 + 5 * 2")
 ); // Виведе 13
-
+/*
 // Задача 2: Напишіть функцію, яка приймає рядок та повертає число з цього рядка або повідомлення про помилку.
 
 // Створюємо функцію з назвою getNumberFromString, яка приймає один аргумент s
@@ -150,3 +155,4 @@ console.log(
   'decodeURL("https://ex%20ample.com")',
   decodeURL("https://ex%20ample.com")
 ); // Виведе "https://ex ample.com"
+*/
