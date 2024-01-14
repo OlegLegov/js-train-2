@@ -17,7 +17,7 @@ console.log(
   'calculateExpression("3 + 5 * 2")',
   calculateExpression("3 + 5 * 2")
 ); // Виведе 13
-/*
+
 // Задача 2: Напишіть функцію, яка приймає рядок та повертає число з цього рядка або повідомлення про помилку.
 
 // Створюємо функцію з назвою getNumberFromString, яка приймає один аргумент s
@@ -26,6 +26,12 @@ function getNumberFromString(s) {
   // Перевіряємо, чи є отримане значення числом за допомогою isNaN
   // Якщо значення не є числом, повертаємо текст "Couldn't extract a number from the provided string."
   // Якщо значення є числом, повертаємо його
+  let num = parseFloat(s);
+  if (isNaN(num)) {
+    return "Couldn't extract a number from the provided string.";
+  } else {
+    return num;
+  }
 }
 
 // Виводимо результати виклику функції
@@ -47,6 +53,12 @@ function getIntegerFromString(s) {
   // Перевіряємо, чи є отримане значення числом за допомогою isNaN
   // Якщо значення не є числом, повертаємо текст "Couldn't extract an integer from the provided string."
   // Якщо значення є числом, повертаємо його
+  let num = parseInt(s);
+  if (isNaN(num)) {
+    return "Couldn't extract an integer from the provided string.";
+  } else {
+    return num;
+  }
 }
 
 // Виводимо результати виклику функції
@@ -69,6 +81,11 @@ function isNumberFinite(num) {
   // За допомогою оператора if перевіряємо, чи є число скінченним.
   // Якщо число є скінченним, повертаємо текст "The number is finite.".
   // Якщо число не є скінченним, повертаємо текст "The number is not finite.".
+  if (isFinite(num)) {
+    return "The number is finite.";
+  } else {
+    return "The number is not finite.";
+  }
 }
 
 // Виконуємо функцію з різними вхідними даними і виводимо результат.
@@ -85,6 +102,11 @@ function isValueNaN(value) {
   // За допомогою оператора if перевіряємо, чи є значення NaN.
   // Якщо значення є NaN, повертаємо текст "The value is NaN.".
   // Якщо значення не є NaN, повертаємо текст  "The value is not NaN.".
+  if (isNaN(value)) {
+    return "The value is NaN.";
+  } else {
+    return "The value is not NaN.";
+  }
 }
 
 // Виконуємо функцію з різними вхідними даними і виводимо результат.
@@ -99,6 +121,7 @@ function encodeURLComponent(urlComponent) {
   // Використовуємо вбудовану функцію encodeURIComponent, щоб закодувати введений компонент URL.
   // Ця функція повертає закодований компонент URL, замінивши небезпечні символи на їх процентне кодування.
   // Повертаємо закодований компонент URL.
+  return encodeURIComponent(urlComponent);
 }
 
 // Виконуємо функцію з вхідними даними і виводимо результат.
@@ -115,6 +138,7 @@ function encodeURL(url) {
   // Використовуємо вбудовану функцію encodeURI, щоб закодувати введений URL.
   // Ця функція повертає закодований URL, замінивши небезпечні символи на їх процентне кодування.
   // Повертаємо закодований URL.
+  return encodeURI(url);
 }
 
 // Виконуємо функцію з вхідними даними і виводимо результат.
@@ -131,6 +155,7 @@ function decodeURLComponent(urlComponent) {
   // Використовуємо вбудовану функцію decodeURIComponent, щоб декодувати введений закодований компонент URL.
   // Ця функція повертає декодований компонент URL, замінивши процентне кодування символів на їх реальні значення.
   // Повертаємо декодований компонент URL.
+  return decodeURIComponent(urlComponent);
 }
 
 // Виконуємо функцію з вхідними даними і виводимо результат.
@@ -147,6 +172,7 @@ function decodeURL(url) {
   // Використовуємо вбудовану функцію decodeURI, щоб декодувати введений закодований URL.
   // Ця функція повертає декодований URL, замінивши процентне кодування символів на їх реальні значення.
   // Повертаємо декодований URL.
+  return decodeURI(url);
 }
 
 // Виконуємо функцію з вхідними даними і виводимо результат.
@@ -155,4 +181,3 @@ console.log(
   'decodeURL("https://ex%20ample.com")',
   decodeURL("https://ex%20ample.com")
 ); // Виведе "https://ex ample.com"
-*/
